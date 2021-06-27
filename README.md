@@ -9,7 +9,7 @@
   > update the env variables VAULT_ADDRESS to use it in any shell.
 
 # Create secret
-kv (key value) --> path should be prefixed by secret/ --> it can have n number of key value pairs stored in one secret
+kv (key value v2 secret engine) --> path should be prefixed by secret/ --> it can have n number of key value pairs stored in one secret
   >  vault kv put secret/hello foo=world excited=yes
 
 # Retreive Secret

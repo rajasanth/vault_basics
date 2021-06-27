@@ -45,3 +45,6 @@ security_token     <nil>
     Auto removal of the secret post lease_duration.
  PS C:\Users\212801747> vault lease revoke aws/creds/my-role/vAGZ071PLGSaTTjUHfZr11Mk                                                 All revocation operations queued successfully!
     
+# Built in help
+    
+    vault path-help aws

@@ -49,3 +49,9 @@ Code: 403. Errors:
 
 * preflight capability check returned 403, please ensure client's policies grant access to path "kv/abc/"
 * 
+
+Automatically all the secrets stored are revoked once after disabled and wont be restored after enabling it back
+> PS C:\Users\212801747> vault secrets enable kv
+Success! Enabled the kv secrets engine at: kv/
+PS C:\Users\212801747> vault kv get kv/abc
+No value found at kv/abc

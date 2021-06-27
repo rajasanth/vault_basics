@@ -34,3 +34,18 @@ sys/          system       system_5e997db5       system endpoints used for contr
 
 # Delete secret
   > vault kv delete secret/hello
+
+# Disabling a secret path:
+  > vault secrets disable kv/
+here kv/ is the path created. It will revoke all the secrets stored in the path
+
+PS C:\Users\212801747> vault secrets disable kv/
+Success! Disabled the secrets engine (if it existed) at: kv/
+PS C:\Users\212801747> vault kv get kv/abc
+Error making API request.
+
+URL: GET http://127.0.0.1:8200/v1/sys/internal/ui/mounts/kv/abc
+Code: 403. Errors:
+
+* preflight capability check returned 403, please ensure client's policies grant access to path "kv/abc/"
+* 

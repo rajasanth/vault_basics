@@ -12,6 +12,21 @@
 kv (key value v2 secret engine) --> path should be prefixed by secret/ for to determine kv type --> it can have n number of key value pairs stored in one secret
   >  vault kv put secret/hello foo=world excited=yes
 
+To enable at a different path
+ > vault secrets enable -path=kv kv
+ > vault secrets enable kv
+
+# Listing all the secret paths
+
+PS C:\Users\212801747> vault secrets list
+Path          Type         Accessor              Description
+----          ----         --------              -----------
+cubbyhole/    cubbyhole    cubbyhole_8a471874    per-token private secret storage
+identity/     identity     identity_cb9170e0     identity store
+kv/           kv           kv_c6963ae1           n/a
+secret/       kv           kv_a2b353d8           key/value secret storage
+sys/          system       system_5e997db5       system endpoints used for control, policy and debugging
+
 # Retreive Secret
   > vault kv get secret/hello
   >  vault kv get -field=excited secret/hello
